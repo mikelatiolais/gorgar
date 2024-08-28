@@ -1,0 +1,107 @@
+#config_version=5
+
+switches:
+
+  #MATRIX SWITCHES
+  #valid numbers are 1-0-32 through 1-0-95
+  #Col 1
+  s_plumb_bob_tilt:
+    number: 1-0-32
+  s_ball_row_tilt:
+    number: 1-0-33
+  s_credit:
+    number: 1-0-34
+  s_right_coin:
+    number: 1-0-35
+  s_center_coin:
+    number: 1-0-36
+  s_left_coin:
+    number: 1-0-37
+  s_slam_tilt:
+    number: 1-0-38
+  s_high_score_reset:
+    number: 1-0-39
+
+  #Col 2
+  s_outhole:
+    number: 1-0-40
+  s_left_outside_rollover:
+    number: 1-0-41
+  s_d_rollover:
+    number: 1-0-42
+  s_left_kicker:
+    number: 1-0-43
+  s_lower_left_standup:
+    number: 1-0-44
+  s_1_target:
+    number: 1-0-45
+  s_eject_hole:
+    number: 1-0-46
+  s_middle_left_standup:
+    number: 1-0-47
+
+  #Col 3
+  s_upper_left_standup:
+    number: 1-0-48
+  s_g_drop_target:
+    number: 1-0-49
+  s_o_drop_target:
+    number: 1-0-50
+  s_r_drop_target:
+    number: 1-0-51
+  s_gor_drop_series:
+    number: 1-0-52
+  s_gor_drop_standup:
+    number: 1-0-53
+  s_magnet:
+    number: 1-0-54
+  s_middle_lower_standup:
+    number: 1-0-55
+
+  #Col 4
+  s_middle_upper_standup:
+    number: 1-0-56
+  s_a_rollover:
+    number: 1-0-57
+  s_b_rollover:
+    number: 1-0-58
+  s_c_rollover:
+    number: 1-0-59
+  s_playfield_tilt:
+    number: 1-0-60
+  s_spinner_1000:
+    number: 1-0-61
+  s_2_target:
+    number: 1-0-62
+  s_3_target:
+    number: 1-0-63
+
+  #Col 5
+  s_4_target:
+    number: 1-0-64
+  s_right_outside_rollover:
+    number: 1-0-65
+  s_e_rollover:
+    number: 1-0-66
+  s_right_kicker:
+    number: 1-0-67
+  s_left_jet_bumper:
+    number: 1-0-68
+  s_top_jet_bumper:
+    number: 1-0-69
+  s_bottom_jet_bumper:
+    number: 1-0-70
+  s_gar_drop_target_standup:
+    number: 1-0-71
+
+  #Col 6
+  s_g_drop_target:
+    number: 1-0-72
+  s_a_drop_target:
+    number: 1-0-73
+  s_r_drop_target:
+    number: 1-0-74
+  s_gar_drop_target_series:
+    number: 1-0-71
+
+  # All other lamp columns are enpty
