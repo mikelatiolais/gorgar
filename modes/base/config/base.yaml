@@ -1,0 +1,64 @@
+#config_version=6
+mode:
+  start_events: ball_starting
+  priority: 100
+
+event_player:
+  multiplayer_game: player_1_multiplayer_slide
+  player_1_ball_started: player_1_multiplayer_slide
+
+slide_player:
+
+
+sound_player:
+
+variable_player:
+  left_orbit_hit:
+    score: 1000000
+  left_ramp_hit:
+    score: 1000000
+  side_ramp_hit:
+    score: 2000000
+  right_ramp_hit:
+    score: 1000000
+  right_orbit_hit:
+    score: 1500000
+  center_ramp_hit:
+    score: 250000
+  sw_slingshot:
+    score: 5170
+  sw_jet:
+    score: 75020
+  sw_outlane:
+    score: 24440
+  sw_inlane:
+    score: 47650
+  standups_lit_hit:
+    score: 10000
+  standups_unlit_hit:
+    score: 50000
+  standups_lit_complete:
+    score: 100000
+  rollover_lanes_lit_hit:
+    score: 5000
+  rollover_lanes_unlit_hit:
+    score: 45000
+  rollover_lanes_lit_complete:
+    score: 375000
+  sw_small_car_crash:
+    score: 25000
+  sw_big_car_crash:
+    score: 11000
+  balldevice_lower_vuk_ball_enter:
+    score: 475000
+  balldevice_upper_vuk_ball_enter:
+    score: 110000
+  balldevice_retina_hole_ball_enter:
+    score: 225000
+
+shot_groups:
+
+slides:
+
+
+shots:
