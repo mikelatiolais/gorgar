@@ -1,0 +1,54 @@
+#config_version=6
+
+# The coils are based on two boards, a Cobrapin and a Cobrapin expansion board
+# Author - Michael Latiolais
+coils:
+
+  # Coils
+  # Main cobrapin - Bank B
+  c_ball_release:
+    number: 0-0-0
+    default_pulse_ms: 40
+  c_eject_hole:
+    number: 0-0-1
+    default_pulse_ms: 40
+  c_gar_drop_reset:
+    number: 0-0-2
+    default_pulse_ms: 40
+  c_gor_drop_reset:
+    number: 0-0-3
+    default_pulse_ms: 40
+  c_magnet_relay:
+    number: 0-0-4
+    default_pulse_ms: 40
+  c_magnet_lamps:
+    number: 0-0-5
+    default_pulse_ms: 40
+
+  c_knocker:
+    number: 1-0-1
+    default_pulse_ms: 40
+  c_top_jet_bumper:
+    number: 1-0-2
+    default_pulse_ms: 40
+  c_left_jet_bumper:
+    number: 1-0-3
+    default_pulse_ms: 40
+  c_bottom_jet_bumper:
+    number: 1-0-5
+    default_pulse_ms: 40
+  c_right_slingshot:
+    number: 1-0-6
+    default_pulse_ms: 40
+  c_left_slingshot:
+    number: 1-0-7
+    default_pulse_ms: 40
+
+  c_left_flipper:
+    number: 0-0-8
+    default_pulse_ms: 18
+    allow_enable: true
+  c_right_flipper:
+    number: 0-0-9
+    default_pulse_ms: 18
+    allow_enable: true

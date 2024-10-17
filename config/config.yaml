@@ -1,4 +1,4 @@
-#config_version=5
+#config_version=6
 
 #CobraPin Example Config
 
@@ -42,33 +42,82 @@ psus:
 #  config section here      
 config:
   - switches_config.yaml
-  - lamp_config.yaml
-  #- lights_config.yaml
-  #- coils_config.yaml
-  # ...
-
-coils:
-  #coil numbers are labelled in silkscreen on the board
+  - lamps_config.yaml
+  - coils_config.yaml
 
 flippers:
   #Add your flipper config
+  left_flipper:
+    main_coil: c_left_flipper
+    activation_switch: s_left_flipper
+    #enable_events: machine_reset_phase_3
+  right_flipper:
+    main_coil: c_right_flipper
+    activation_switch: s_right_flipper
+    #enable_events: machine_reset_phase_3
 
+drop_targets:
+  gar_first:
+    switch: s_g_drop_target
+  gar_second:
+    switch: s_o_drop_target
+  gar_third:
+    switch: s_r_drop_target
+  gor_first:
+    switch: s_g2_drop_target
+  gor_second:
+    switch: s_o_drop_target
+  gor_third:
+    switch: s_r2_drop_target
+drop_target_banks:
+  gor_bank:
+    drop_targets: gar_first, gar_second, gar_third
+    reset_coils: c_gor_drop_reset
+    reset_on_complete: 3s
+  gar_bank:
+    drop_targets: gor_first, gor_second, gor_third
+    reset_coils: c_gar_drop_reset
+    reset_on_complete: 3s
 
 autofire_coils:
   #Add your autofire cofigs for pops, slings, etc.
+  left_slingshot:
+    coil: c_left_slingshot
+    switch: s_left_kicker
+  right_slingshot:
+    coil: c_right_slingshot
+    switch: s_right_kicker
+  top_jet_bumper:
+    coil: c_top_jet_bumper
+    switch: s_top_jet_bumper
+  left_jet_bumper:
+    coil: c_left_jet_bumper
+    switch: s_left_jet_bumper
+  bottom_jet_bumper:
+    coil: c_bottom_jet_bumper
+    switch: s_bottom_jet_bumper
 
 
 ball_devices:
   #Add your ball devices
-
+  bd_drain:
+    ball_switches: s_outhole
+    eject_coil: c_ball_release
+    tags: drain, home, trough
+    eject_timeouts: 4s
+    debug: true
 
 playfields:
   #Define your playfields
+  playfield:
+    default_source_device: bd_drain
+    tags: default
 
 
 machine:
   balls_installed: 3 #How many balls are physically in your game
-  min_balls: 3 #How few balls can be accounted for before you can start a game
+  # Change the below to min_balls: 1 
+  min_balls: 0 #How few balls can be accounted for before you can start a game
 
 
 game:
@@ -78,8 +127,8 @@ game:
 
 modes:
   #Add all your mode names here
-  #- attract
-  #- base
+  - attract
+  - base
   #- etc
 
 
@@ -88,3 +137,21 @@ keyboard:   #use to drive your game from the computer for testing
     switch: s_left_eos
   "/":
     switch: s_right_eos
+  s:
+    switch: s_credit
+
+# When certain events happen, we want to disable and enable solenoids.
+event_player:
+  ball_starting:
+    - cmd_flippers_enable
+    - cmd_autofire_coils_enable
+    - cmd_drop_targets_reset
+  ball_ending:
+    - cmd_flippers_disable
+    - cmd_autofire_coils_disable
+  tilt:
+    - cmd_flippers_disable
+    - cmd_autofire_coils_disable
+  slam_tilt:
+    - cmd_flippers_disable
+    - cmd_autofire_coils_disable

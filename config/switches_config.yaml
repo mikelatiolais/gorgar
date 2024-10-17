@@ -1,4 +1,4 @@
-#config_version=5
+#config_version=6
 
 switches:
 
@@ -11,6 +11,7 @@ switches:
     number: 1-0-33
   s_credit:
     number: 1-0-34
+    tags: start
   s_right_coin:
     number: 1-0-35
   s_center_coin:
@@ -45,10 +46,13 @@ switches:
     number: 1-0-48
   s_g_drop_target:
     number: 1-0-49
+    tags: drop_target
   s_o_drop_target:
     number: 1-0-50
+    tags: drop_target
   s_r_drop_target:
     number: 1-0-51
+    tags: drop_target
   s_gor_drop_series:
     number: 1-0-52
   s_gor_drop_standup:
@@ -95,13 +99,20 @@ switches:
     number: 1-0-71
 
   #Col 6
-  s_g_drop_target:
+  s_g2_drop_target:
     number: 1-0-72
+    tags: drop_target
   s_a_drop_target:
     number: 1-0-73
-  s_r_drop_target:
+    tags: drop_target
+  s_r2_drop_target:
     number: 1-0-74
+    tags: drop_target
   s_gar_drop_target_series:
-    number: 1-0-71
+    number: 1-0-75
 
-  # All other lamp columns are enpty
+  # Direct switches
+  s_left_flipper:
+    number: 0-0-1
+  s_right_flipper:
+    number: 0-0-2
